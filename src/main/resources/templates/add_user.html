@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Fromulaire</title>
+</head>
+<body>
+<form action="#" method="post" data-th-action="@{/add_user}" data-th-object="${user}" accept-charset="utf-8">
+  <p><label>Nom : </label><input type="text" data-th-field="*{nom}"></p>
+    <span data-th-if="${#fields.hasErrors('nom')}" data-th-errors="*{nom}"></span></p>
+
+  <p><label>Prénom : </label><input type="text" data-th-field="*{prenom}"></p>
+    <span data-th-if="${#fields.hasErrors('prenom')}" data-th-errors="*{prenom}"></span></p>
+
+  <p><label>Pseudo : </label><input type="text" data-th-field="*{pseudo}"></p>
+    <span data-th-if="${#fields.hasErrors('pseudo')}" data-th-errors="*{pseudo}"></span></p>
+<button type="submit">Envoyer</button>
+</form>
+</body>
+</html>

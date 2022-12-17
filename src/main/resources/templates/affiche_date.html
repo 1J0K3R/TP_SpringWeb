@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Affiche Date</title>
+</head>
+<body>
+La date du jours : <br><br><br>
+
+Version 1
+<p data-th-text="${now}"></p><br>
+
+Version 2 :
+<p data-th-text="${#dates.format(now, 'dd MMMM yyyy HH:mm:ss')}"></p>
+</body>
+</html>
